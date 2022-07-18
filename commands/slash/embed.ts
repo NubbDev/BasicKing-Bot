@@ -1,4 +1,4 @@
-import { MessageEmbed } from "discord.js";
+import { MessageEmbed, TextChannel } from "discord.js";
 import { ICommand } from "wokcommands";
 import * as fs from 'fs';
 
@@ -14,16 +14,30 @@ export default {
     testOnly: true,
     slash: true,
 
-    minArgs: 1,
-    expectedArgs:'<name>',
+    minArgs: 2,
+    maxArgs: 2,
+    expectedArgs:'<channel> <name>',
+    expectedArgsTypes: ['CHANNEL', 'STRING'],
 
-    callback: ({message, text}) => {
-        let embed:any;
+    callback: ({interaction, args}) => {
+        const channel = (interaction.options.getChannel('channel')) as TextChannel;
+        if (!channel || channel.type !== 'GUILD_TEXT') {
+            return 'Please tag a text channel'
+        }
+
+        var embed:any;
+        const text = args[1]
         if (text === 'rules') {
             embed = new MessageEmbed(rules)
+            channel.send(embed)
+            return 'sent'
         } else if (text === 'staff'){
             embed = new MessageEmbed(staff)
+            channel.send(embed)
+            return 'sent'
+        } else {
+            return `Unable to find ${embed}`
         }
-        return embed
+        
     }
 } as ICommand
