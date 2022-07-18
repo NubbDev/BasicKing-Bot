@@ -1,0 +1,23 @@
+{
+  "name": "basicking-bot",
+  "version": "1.0.0",
+  "description": "Literally BasicKing's Bot",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.ts"
+  },
+  "author": "NubbDev",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "github:discordjs/builders",
+    "@discordjs/rest": "^1.0.0",
+    "@napi-rs/canvas": "^0.1.25",
+    "discord-api-types": "^0.36.2",
+    "discord.js": "^13.9.0",
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.4.4",
+    "ts-node": "^10.9.1",
+    "wokcommands": "^1.5.3"
+  }
+}

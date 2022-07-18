@@ -1,0 +1,35 @@
+{
+    "title": "Here's a list of all the current staff positions and the list of members!",
+    "color": 15844367,
+    "description": "",
+    "timestamp": "",
+    "author": {},
+    "image": {},
+    "thumbnail": {},
+    "footer": {
+        "text": "King's Oasis",
+        "icon_url": "https://cdn.discordapp.com/icons/986976198108254218/2f2e8dfa70f46a85a72ce7fb0a709357.webp?size=240"
+    },
+    "fields": [
+        {
+        "name": "** 👑 ~ The Owner **",
+        "value": "The <@&988684499049123860> of his Ship. (<@638787124857929761>)"
+        },
+        {
+        "name": "**📊 ~ The Manager**",
+        "value": "The Captain's <@&988684774275153970> (<@401844809385508903>)"
+        },
+        {
+        "name": "**📈 ~ The Administration**",
+        "value": "The <@&988684503859998720>s of the ship (<@565379068753739786>)"
+        },
+        {
+        "name": "**📜 ~ The Senior Moderation**",
+        "value": "The <@&988684508599549962>s of the Ship.(<@801830378054090782>, <@801830378054090782>)"
+        },
+        {
+        "name": "**✉️ ~ The Moderation**",
+        "value": "The <@&988684513393639424>s of the ship."
+        }
+    ]
+}
