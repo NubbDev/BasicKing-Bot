@@ -25,18 +25,17 @@ export default {
             return 'Please tag a text channel'
         }
 
-        var embed:any;
         const text = args[1]
         if (text === 'rules') {
-            embed = new MessageEmbed(rules)
-            channel.send(embed)
+            let embed = new MessageEmbed(rules)
+            channel.send({embeds: [embed]})
             return 'sent'
         } else if (text === 'staff'){
-            embed = new MessageEmbed(staff)
-            channel.send(embed)
+            let embed = new MessageEmbed(staff)
+            channel.send({embeds: [embed]})
             return 'sent'
         } else {
-            return `Unable to find ${embed}`
+            return `Unable to find ${text}`
         }
         
     }
