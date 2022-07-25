@@ -54,21 +54,25 @@ export default {
                     {
                         label: 'Update Notifications',
                         description: 'Receive server update pings!',
+                        emoji: '📆',
                         value: '996248807916445739'
                     },
                     {
                         label: 'Event Ping',
                         description: 'Receive event notifications for server fun times!',
+                        emoji: '🎉',
                         value: '996248566362284042' 
                     },
                     {
                         label: 'Giveaway Notifications',
                         description: 'Receive giveaway pings for free items!',
+                        emoji: '🎁',
                         value: '996248853990875206'
                     },
                     {
                         label: 'Social Notifications',
                         description: 'Get alerted to twitter and livestream notifications!',
+                        emoji: '🐦',
                         value: '1000646675989266532' 
                     }
                 ])

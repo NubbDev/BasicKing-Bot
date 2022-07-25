@@ -14,6 +14,14 @@ const client = new Client({
 })
 
 client.on('ready', () => {
+    client.user?.setPresence({
+        status: 'online',
+        activities: [{
+            name: "BasicKing on youtube",
+            type: 'WATCHING',
+            url: 'https://youtube.com/Basickingyt',
+        }]
+    })
     const dbOptions = {
         keepAlive: true,
         useNewUrlParser:true,
@@ -21,6 +29,7 @@ client.on('ready', () => {
     }
     new WOKCommands(client, {
         commandsDir: path.join(__dirname, 'commands'),
+        featuresDir: path.join(__dirname, 'features'),
         typeScript: true,
         dbOptions,
         mongoUri: process.env.MONGO_URI,
