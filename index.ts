@@ -1,4 +1,4 @@
-import { Intents, Client } from 'discord.js';
+import { Intents, Client}from 'discord.js';
 import WOKCommands from 'wokcommands';
 import dotenv from 'dotenv';
 dotenv.config();
@@ -41,6 +41,7 @@ client.on('ready', () => {
     .setDisplayName("Butler's")
 
     console.log(`Bot is Ready`)
+
 })
 
 client.login(process.env.TOKEN)

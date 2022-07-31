@@ -14,7 +14,7 @@ export default {
 
     minArgs: 3,
     expectedArgs: `<user> <period> <reason>`,
-    expectedArgsTypes: ["USER", "STRING","STRING"],
+    expectedArgsTypes: ["USER", "STRING", "STRING"],
 
     callback: async ({message, interaction, args, guild, member: staff, client}) => {
         if (!guild) return {custom: true, content: "Command only executable in a server" , ephemeral: true}
