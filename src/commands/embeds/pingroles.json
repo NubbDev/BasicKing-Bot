@@ -1,0 +1,9 @@
+{
+    "title": "Notification Role",
+    "color": 15844367,
+    "description": "Making sure we will not disturb your day, we created ping roles so only people who want to receive the notification will be notified! Reacting to the following roles will receive those pings!",
+    "footer": {
+        "text": "King's Oasis",
+        "icon_url": "https://cdn.discordapp.com/icons/986976198108254218/2f2e8dfa70f46a85a72ce7fb0a709357.webp?size=240"
+    }
+}
