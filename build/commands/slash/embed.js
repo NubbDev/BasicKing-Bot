@@ -25,8 +25,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const discord_js_1 = require("discord.js");
 const fs = __importStar(require("fs"));
-let rules = JSON.parse(fs.readFileSync('./commands/embeds/rules.json').toString());
-let staff = JSON.parse(fs.readFileSync('./commands/embeds/staff.json').toString());
+let rules = JSON.parse(fs.readFileSync('./build/embeds/rules.json').toString());
+let staff = JSON.parse(fs.readFileSync('./build/embeds/staff.json').toString());
 exports.default = {
     category: "embeds",
     description: "send Embeds",

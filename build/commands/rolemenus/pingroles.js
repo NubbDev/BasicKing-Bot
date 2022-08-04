@@ -71,7 +71,7 @@ exports.default = {
     },
     callback: ({ interaction }) => __awaiter(void 0, void 0, void 0, function* () {
         const channel = (interaction.options.getChannel('channel'));
-        let pingroles = JSON.parse(fs.readFileSync('./commands/embeds/pingroles.json').toString());
+        let pingroles = JSON.parse(fs.readFileSync('./build/embeds/pingroles.json').toString());
         let row = new discord_js_1.MessageActionRow;
         row.addComponents(new discord_js_1.MessageSelectMenu()
             .setCustomId("PingMenu")

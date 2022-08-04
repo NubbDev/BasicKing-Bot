@@ -2,8 +2,8 @@ import { MessageEmbed, TextChannel } from "discord.js";
 import { ICommand } from "wokcommands";
 import * as fs from 'fs';
 
-let rules = JSON.parse(fs.readFileSync('./commands/embeds/rules.json').toString())
-let staff = JSON.parse(fs.readFileSync('./commands/embeds/staff.json').toString())
+let rules = JSON.parse(fs.readFileSync('./build/embeds/rules.json').toString())
+let staff = JSON.parse(fs.readFileSync('./build/embeds/staff.json').toString())
 
 export default {
     category: "embeds",

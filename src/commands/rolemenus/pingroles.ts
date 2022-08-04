@@ -42,7 +42,7 @@ export default {
 
     callback: async ({interaction}) => {
         const channel = (interaction.options.getChannel('channel')) as TextChannel;
-        let pingroles = JSON.parse(fs.readFileSync('./commands/embeds/pingroles.json').toString())
+        let pingroles = JSON.parse(fs.readFileSync('./build/embeds/pingroles.json').toString())
         let row = new MessageActionRow
         row.addComponents(
             new MessageSelectMenu()
