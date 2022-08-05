@@ -26,4 +26,5 @@ exports.default = (client) => __awaiter(void 0, void 0, void 0, function* () {
         channel.setName(`👥│Members: ${member.guild.members.cache.filter(member => !member.user.bot).size}`);
         console.log(`${guild.name} has ${guild.members.cache.filter(member => !member.user.bot).size} members`);
     });
+    console.log(`${guild.memberCount} members in counting`);
 });

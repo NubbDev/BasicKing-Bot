@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const punishment_schema_1 = __importDefault(require("../../models/punishment-schema"));
+const player_schema_1 = __importDefault(require("../../models/player-schema"));
 exports.default = {
     category: 'moderation',
     description: 'mute a user',
@@ -66,7 +66,7 @@ exports.default = {
         }
         const expires = new Date();
         expires.setMinutes(expires.getMinutes() + time);
-        const result = yield punishment_schema_1.default.findOne({
+        const result = yield player_schema_1.default.findOne({
             guildId: guild.id,
             userId,
             type: "mute",
@@ -82,7 +82,7 @@ exports.default = {
                     return { custom: true, content: `Server is missing the mute role`, ephemeral: true };
                 member.roles.add(muteRole);
             }
-            yield new punishment_schema_1.default({
+            yield new player_schema_1.default({
                 userId,
                 guildId: guild.id,
                 staffId: staff.id,

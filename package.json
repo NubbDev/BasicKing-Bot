@@ -13,12 +13,19 @@
     "@discordjs/builders": "github:discordjs/builders",
     "@discordjs/rest": "^1.0.0",
     "@napi-rs/canvas": "^0.1.25",
+    "cheerio": "^1.0.0-rc.12",
     "discord-api-types": "^0.36.2",
     "discord.js": "^13.9.0",
     "dotenv": "^16.0.1",
     "mongoose": "^6.4.4",
+    "node-superfetch": "^0.2.3",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
     "rss-parser": "^3.12.0",
     "ts-node": "^10.9.1",
     "wokcommands": "^1.5.3"
+  },
+  "devDependencies": {
+    "@types/request-promise": "^4.1.48"
   }
 }

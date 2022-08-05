@@ -21,5 +21,6 @@ export default async(client: Client) => {
         console.log(`${guild.name} has ${guild.members.cache.filter(member => !member.user.bot).size} members`)
 
     })
+    console.log(`${guild.memberCount} members in counting`)
     
 }

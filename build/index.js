@@ -27,6 +27,8 @@ const client = new discord_js_1.Client({
 });
 client.on('ready', () => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
+    const guildId = '986976198108254218';
+    let guild = client.guilds.cache.get(guildId);
     (_a = client.user) === null || _a === void 0 ? void 0 : _a.setPresence({
         status: 'online',
         activities: [{
@@ -51,11 +53,6 @@ client.on('ready', () => __awaiter(void 0, void 0, void 0, function* () {
     })
         .setDefaultPrefix("?")
         .setDisplayName("Butler's");
-    const membervc = client.channels.cache.get('996460777131212820');
-    let guild = client.guilds.cache.get('986976198108254218');
-    yield guild.members.fetch();
-    membervc.setName(`👥│Members: ${guild.members.cache.filter(member => !member.user.bot).size}`);
-    console.log(`Bot is Ready`);
-    console.log(`${guild.name} has ${guild.memberCount} members in counting`);
+    console.log(`Bot is Ready and working for ${guild.name}`);
 }));
 client.login(process.env.TOKEN);

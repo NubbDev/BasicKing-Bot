@@ -1,6 +1,6 @@
 import { GuildMember, User } from "discord.js";
 import { ICommand } from "wokcommands";
-import punishmentSchema from "../../models/punishment-schema";
+import punishmentSchema from "../../models/player-schema";
 
 export default {
     category: 'moderation',

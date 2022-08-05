@@ -1,4 +1,4 @@
-import punishmentSchema from "../models/punishment-schema"; 
+import punishmentSchema from "../models/player-schema"; 
 import {Client} from 'discord.js'
 
 export default (client: Client) => {

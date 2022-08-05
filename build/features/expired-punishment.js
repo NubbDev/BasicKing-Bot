@@ -13,10 +13,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.config = void 0;
-const punishment_schema_1 = __importDefault(require("../models/punishment-schema"));
+const player_schema_1 = __importDefault(require("../models/player-schema"));
 exports.default = (client) => {
     client.on('guildMemberAdd', (member) => __awaiter(void 0, void 0, void 0, function* () {
-        const result = yield punishment_schema_1.default.findOne({
+        const result = yield player_schema_1.default.findOne({
             guildId: member.guild.id,
             userId: member.id,
             type: 'mute',
@@ -31,7 +31,7 @@ exports.default = (client) => {
         const query = {
             expires: { $lt: new Date() },
         };
-        const results = yield punishment_schema_1.default.find(query);
+        const results = yield player_schema_1.default.find(query);
         for (const result of results) {
             const { guildId, userId, type } = result;
             const guild = yield client.guilds.fetch(guildId);

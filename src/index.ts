@@ -14,6 +14,8 @@ const client = new Client({
 })
 
 client.on('ready', async() => {
+    const guildId = '986976198108254218'
+    let guild = client.guilds.cache.get(guildId) as Guild
     client.user?.setPresence({
         status: 'online',
         activities: [{
@@ -39,14 +41,9 @@ client.on('ready', async() => {
     })
     .setDefaultPrefix("?")
     .setDisplayName("Butler's")
+
+    console.log(`Bot is Ready and working for ${guild.name}`)
     
-    
-    const membervc = client.channels.cache.get('996460777131212820') as VoiceChannel     
-    let guild = client.guilds.cache.get('986976198108254218') as Guild
-    await guild.members.fetch()
-    membervc.setName(`👥│Members: ${guild.members.cache.filter(member => !member.user.bot).size}`)
-    console.log(`Bot is Ready`)
-    console.log(`${guild.name} has ${guild.memberCount} members in counting`)
 
 })
 
